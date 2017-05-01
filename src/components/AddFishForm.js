@@ -4,15 +4,13 @@ class AddFishForm extends React.Component {
 
     createFish(e) {
         e.preventDefault();
-        console.log('msg');
         const fish = {
             name: this.name.value,
             price: this.price.value,
             status: this.status.value,
             desc: this.desc.value,
             image: this.image.value,
-        }
-        console.log('Gonna Make Some Fish');
+        };
         this.props.addFish(fish);
         this.fishForm.reset();
     }

@@ -9,9 +9,9 @@ class App extends React.Component {
     constructor() {
         super();
 
-        this.addFish = this.addFish.bind(this);
-        this.loadSamples = this.loadSamples.bind(this);
-        this.addToOrder = this.addToOrder.bind(this);
+        // this.addFish = this.addFish.bind(this);
+        // this.loadSamples = this.loadSamples.bind(this);
+        // this.addToOrder = this.addToOrder.bind(this);
 
 
         this.state = {
@@ -20,7 +20,7 @@ class App extends React.Component {
         };
     }
 
-    addFish(fish) {
+    addFish = (fish) => {
 
         // update our state
         const fishes = {...this.state.fishes};
@@ -31,22 +31,22 @@ class App extends React.Component {
 
         //save our state
         this.setState({ fishes });
-    }
+    };
 
-    loadSamples(){
+    loadSamples = () =>{
         this.setState({
            fishes: sampleFishes
         });
-    }
+    };
 
-    addToOrder(key) {
+    addToOrder = (key) => {
 
         const order = {...this.state.order};
 
         order[key] = order[key] + 1 || 1;
 
         this.setState({ order });
-    }
+    };
 
     render () {
         return (
